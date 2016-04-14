@@ -1,0 +1,348 @@
+import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+
+import org.dyno.visual.swing.layouts.Constraints;
+import org.dyno.visual.swing.layouts.GroupLayout;
+import org.dyno.visual.swing.layouts.Leading;
+
+//VS4E -- DO NOT REMOVE THIS LINE!
+public class MainFrame extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JLabel jLabel0;
+	private JLabel jLabel1;
+	private JLabel jLabel2;
+	private JTextField jTextField0;
+	private JTextField jTextField1;
+	private JTextField jTextField2;
+	private JComboBox jComboBox0;
+	private JButton jButton0;
+	private JPanel jPanel0;
+	private JLabel jLabel3;
+	private JTextField jTextField3;
+	private JTextField jTextField4;
+	private JTextField jTextField5;
+	private JLabel jLabel4;
+	private JLabel jLabel5;
+	private JLabel jLabel6;
+	private static final String PREFERRED_LOOK_AND_FEEL = "javax.swing.plaf.metal.MetalLookAndFeel";
+	public MainFrame() {
+		initComponents();
+	}
+
+	private void initComponents() {
+		setLayout(new GroupLayout());
+		add(getJLabel2(), new Constraints(new Leading(15, 10, 10), new Leading(144, 10, 10)));
+		add(getJLabel1(), new Constraints(new Leading(15, 12, 12), new Leading(97, 10, 10)));
+		add(getJButton0(), new Constraints(new Leading(227, 12, 12), new Leading(160, 10, 10)));
+		add(getJPanel0(), new Constraints(new Leading(5, 306, 10, 10), new Leading(207, 50, 12, 12)));
+		add(getJLabel0(), new Constraints(new Leading(12, 12, 12), new Leading(41, 12, 12)));
+		add(getJTextField5(), new Constraints(new Leading(132, -68, 10, 10), new Leading(65, 12, 12)));
+		add(getJLabel4(), new Constraints(new Leading(64, 108, 12, 12), new Leading(67, 12, 12)));
+		add(getJLabel5(), new Constraints(new Leading(58, 108, 10, 10), new Leading(121, 12, 12)));
+		add(getJLabel6(), new Constraints(new Leading(60, 109, 10, 10), new Leading(168, 12, 12)));
+		add(getJComboBox0(), new Constraints(new Leading(22, 10, 10), new Leading(6, 12, 12)));
+		add(getJTextField0(), new Constraints(new Leading(56, 112, 12, 12), new Leading(39, 12, 12)));
+		add(getJTextField1(), new Constraints(new Leading(61, 108, 12, 12), new Leading(93, 12, 12)));
+		add(getJTextField2(), new Constraints(new Leading(61, 108, 12, 12), new Leading(142, 12, 12)));
+		setSize(320, 269);
+	}
+
+	private JLabel getJLabel6() {
+		if (jLabel6 == null) {
+			jLabel6 = new JLabel();
+			jLabel6.setForeground(Color.red);
+		}
+		return jLabel6;
+	}
+
+	private JLabel getJLabel5() {
+		if (jLabel5 == null) {
+			jLabel5 = new JLabel();
+			jLabel5.setForeground(Color.red);
+		}
+		return jLabel5;
+	}
+
+	private JLabel getJLabel4() {
+		if (jLabel4 == null) {
+			jLabel4 = new JLabel();
+			jLabel4.setForeground(Color.red);
+		}
+		return jLabel4;
+	}
+
+	private JTextField getJTextField5() {
+		if (jTextField5 == null) {
+			jTextField5 = new JTextField();
+		}
+		return jTextField5;
+	}
+
+	private JTextField getJTextField4() {
+		if (jTextField4 == null) {
+			jTextField4 = new JTextField();
+		}
+		return jTextField4;
+	}
+
+	private JTextField getJTextField3() {
+		if (jTextField3 == null) {
+			jTextField3 = new JTextField();
+		}
+		return jTextField3;
+	}
+
+	private JLabel getJLabel3() {
+		if (jLabel3 == null) {
+			jLabel3 = new JLabel();
+			jLabel3.setText("终值：");
+		}
+		return jLabel3;
+	}
+
+	private JPanel getJPanel0() {
+		if (jPanel0 == null) {
+			jPanel0 = new JPanel();
+			jPanel0.setBackground(Color.lightGray);
+			jPanel0.setLayout(new GroupLayout());
+			jPanel0.add(getJLabel3(), new Constraints(new Leading(14, 10, 10), new Leading(14, 10, 10)));
+			jPanel0.add(getJTextField3(), new Constraints(new Leading(103, -42, 10, 10), new Leading(14, 12, 12)));
+			jPanel0.add(getJTextField4(), new Constraints(new Leading(63, 90, 10, 10), new Leading(12, 12, 12)));
+		}
+		return jPanel0;
+	}
+
+	private JButton getJButton0() {
+		if (jButton0 == null) {
+			jButton0 = new JButton();
+			jButton0.setText("运行");
+			jButton0.addMouseListener(new MouseAdapter() {
+	
+				public void mouseClicked(MouseEvent event) {
+					jButton0MouseMouseClicked(event);
+				}
+			});
+		}
+		return jButton0;
+	}
+
+	private JComboBox getJComboBox0() {
+		if (jComboBox0 == null) {
+			jComboBox0 = new JComboBox();
+			jComboBox0.setModel(new DefaultComboBoxModel(new Object[] { "复利","单利","本金","利率","期限","资产总值","每月等额还款"}));
+			jComboBox0.setDoubleBuffered(false);
+			jComboBox0.setBorder(null);
+			jComboBox0.addMouseListener(new MouseAdapter() {
+	
+				public void mouseClicked(MouseEvent event) {
+					jComboBox0MouseMouseClicked(event);
+				}
+			});
+		}
+		return jComboBox0;
+	}
+
+	private JTextField getJTextField2() {
+		if (jTextField2 == null) {
+			jTextField2 = new JTextField();
+		}
+		return jTextField2;
+	}
+
+	private JTextField getJTextField1() {
+		if (jTextField1 == null) {
+			jTextField1 = new JTextField();
+		}
+		return jTextField1;
+	}
+
+	private JTextField getJTextField0() {
+		if (jTextField0 == null) {
+			jTextField0 = new JTextField();
+		}
+		return jTextField0;
+	}
+
+	private JLabel getJLabel2() {
+		if (jLabel2 == null) {
+			jLabel2 = new JLabel();
+			jLabel2.setText("期限：");
+		}
+		return jLabel2;
+	}
+
+	private JLabel getJLabel1() {
+		if (jLabel1 == null) {
+			jLabel1 = new JLabel();
+			jLabel1.setText("利率：");
+		}
+		return jLabel1;
+	}
+
+	private JLabel getJLabel0() {
+		if (jLabel0 == null) {
+			jLabel0 = new JLabel();
+			jLabel0.setText("本金：");
+		}
+		return jLabel0;
+	}
+
+	private static void installLnF() {
+		try {
+			String lnfClassname = PREFERRED_LOOK_AND_FEEL;
+			if (lnfClassname == null)
+				lnfClassname = UIManager.getCrossPlatformLookAndFeelClassName();
+			UIManager.setLookAndFeel(lnfClassname);
+		} catch (Exception e) {
+			System.err.println("Cannot install " + PREFERRED_LOOK_AND_FEEL + " on this platform:" + e.getMessage());
+		}
+	}
+
+	/**
+	* Main entry of the class.
+	* Note: This class is only created so that you can easily preview the result at runtime.
+	* It is not expected to be managed by the designer.
+	* You can modify it as you like.
+	*/
+	public static void main(String[] args) {
+		installLnF();
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				MainFrame frame = new MainFrame();
+				frame.setDefaultCloseOperation(MainFrame.EXIT_ON_CLOSE);
+				frame.setTitle("MainFrame");
+				frame.getContentPane().setPreferredSize(frame.getSize());
+				frame.pack();
+				frame.setLocationRelativeTo(null);
+				frame.setVisible(true);
+			}
+		});
+	}
+
+	private void jComboBox0MouseMouseClicked(MouseEvent event) {
+	       if(jComboBox0.getSelectedItem()=="复利"){
+	    	  this.jLabel0.setText("本金:");
+	    	  this.jLabel1.setText("利率:");
+	    	  this.jLabel2.setText("期限:");
+	    	  this.jLabel3.setText("终值:");
+	       }
+	       else if(jComboBox0.getSelectedItem()=="本金"){
+	    	   this.jLabel0.setText("终值:");
+	    	   this.jLabel1.setText("利率:");
+	    	   this.jLabel2.setText("期限:");
+	    	   this.jLabel3.setText("本金:");
+	       }
+	       else if(jComboBox0.getSelectedItem()=="单利"){
+	    	   this.jLabel0.setText("本金:");
+	    	   this.jLabel1.setText("利率:");
+	    	   this.jLabel2.setText("期限:");
+	    	   this.jLabel3.setText("终值:");
+	       }
+	       else if(jComboBox0.getSelectedItem()=="利率"){
+	    	   this.jLabel0.setText("终值:");
+	    	   this.jLabel1.setText("本金:");
+	    	   this.jLabel2.setText("期限:");
+	    	   this.jLabel3.setText("利率:");
+	       }
+	       else if(jComboBox0.getSelectedItem()=="期限"){
+	    	   this.jLabel0.setText("本金:");
+	    	   this.jLabel1.setText("利率:");
+	    	   this.jLabel2.setText("终值:");
+	    	   this.jLabel3.setText("期限:");
+	       }
+	       else if(jComboBox0.getSelectedItem()=="资产总值"){
+	    	   this.jLabel0.setText("本金:");
+	    	   this.jLabel1.setText("利率:");
+	    	   this.jLabel2.setText("期限:");
+	    	   this.jLabel3.setText("资产总值:");
+	       }
+	        else if(jComboBox0.getSelectedItem()=="每月等额还款"){
+	    	   this.jLabel0.setText("借款:");
+	    	   this.jLabel1.setText("利率:");
+	    	   this.jLabel2.setText("期限:");
+	    	   this.jLabel3.setText("月还款:");
+	       }
+	}
+	public void run()
+	{
+		try{
+			double f=0;
+			//当输入值为空，结果返回0
+			if(jTextField0.getText().equals("") ||jTextField1.getText().equals("") ||jTextField2.getText().equals(""))
+			{
+			  jLabel4.setText("请输入>0的数字");	
+			  jLabel5.setText("请输入>0的数字");
+			  jLabel6.setText("请输入>0的数字");
+			}else{
+				NumberFormat currencyformatter=NumberFormat.getCurrencyInstance();//字符串转化为数字
+				float P=Float.parseFloat(jTextField0.getText());
+				float r=Float.parseFloat(jTextField1.getText());
+				float N=Float.parseFloat(jTextField2.getText());
+				if(P<=0)
+				{
+					jLabel4.setText("请输入>0的数字");
+				}
+				if(r<=0)
+				{
+					jLabel5.setText("请输入>0的数字");
+				}
+				if(N<=0)
+				{
+					jLabel6.setText("请输入>0的数字");
+				}
+				if(P>0&&r>0&&N>0)
+				{
+					if(jComboBox0.getSelectedItem()=="复利"){
+						f=P*(Math.pow((1+r), N));
+					}
+					if(jComboBox0.getSelectedItem()=="单利"){
+						f=P+P*N*r;
+					}
+					if(jComboBox0.getSelectedItem()=="本金"){
+						f=P / Math.pow((1 + r), N);
+					}
+					if(jComboBox0.getSelectedItem()=="利率"){
+						f=Math.pow(P/r,1d/N);
+					}
+					if(jComboBox0.getSelectedItem()=="期限"){
+						f=(Math.log(N)/Math.log(1+r))-(Math.log(P)/Math.log(1+r));
+					}
+					if(jComboBox0.getSelectedItem()=="资产总值"){
+						f=P*(Math.pow((1+r), N)-1)/r;
+					}
+					if(jComboBox0.getSelectedItem()=="每月等额还款"){
+						f=(P+(P*r)*N)/12;
+					}
+				}
+				DecimalFormat df = new DecimalFormat("0.00");
+                String db = df.format(f);
+                jTextField4.setText(String.valueOf(db));
+			}
+			
+		}
+	catch (Exception e) {
+        System.out.println(e.getMessage());
+	}
+}
+
+	private void jButton0MouseMouseClicked(MouseEvent event) {
+		run();
+	}
+	
+}
+
+
